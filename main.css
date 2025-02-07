@@ -1,0 +1,74 @@
+:root {
+  /* Playboi Carti Color Theme */
+  --main-color: #ff0000; /* Whole Lotta Red primary color */
+  --hover-color: #b30000; /* Darker red for hover effects */
+  --success-color: #ff1a1a; /* Bright red for success */
+  --danger-color: #8b0000; /* Deep red for warnings */
+
+  /* Channel & Server Colors */
+  --channel-color: rgba(255, 255, 255, 0.3);
+  --channel-hovered: rgba(255, 0, 0, 0.7);
+  --channel-unread: var(--main-color);
+  --channel-selected: #fff;
+  --channel-muted: rgba(255, 255, 255, 0.1);
+  --server-unread: var(--main-color);
+  --url-color: var(--main-color);
+  --focus-color: var(--main-color);
+
+  /* Status Colors */
+  --online-color: #ff1a1a;
+  --idle-color: #ff6600;
+  --dnd-color: #8b0000;
+  --offline-color: #4d4d4d;
+  --streaming-color: #661a80;
+
+  /* Fonts - Playboi Carti Aesthetic */
+  --main-font: "Old English Text MT", "Impact", "Arial Black", sans-serif;
+  --code-font: "Fira Code", "Courier New", monospace;
+  --font-display: var(--main-font);
+  
+  /* Text Colors */
+  --text-normal: rgb(220, 0, 0); /* Blood red text */
+  --text-muted: rgb(114, 0, 0); /* Dark red muted text */
+
+  /* Sidebar & Channel List */
+  --channels-width: 200px; /* Sleek & compact channel list */
+  --members-width: 230px; /* Member list width */
+
+  /* Background - Playboi Carti Whole Lotta Red Theme */
+  --background-shading: 90%;
+  --background-overlay: rgba(0, 0, 0, 0.8);
+  --background-image: url(https://i.imgur.com/zUjOXxl.jpg); /* Playboi Carti aesthetic */
+  --background-position: center;
+  --background-size: cover;
+  --background-repeat: no-repeat;
+  --background-attachment: fixed;
+  --background-brightness: 85%;
+  --background-contrast: 120%;
+  --background-saturation: 140%;
+  --background-invert: 0%;
+  --background-grayscale: 10%;
+  --background-sepia: 5%;
+  --background-blur: 3px;
+
+  /* Popouts & Modals */
+  --user-popout-image: var(--background-image);
+  --user-popout-overlay: rgba(0, 0, 0, 0.7);
+  --user-modal-image: var(--background-image);
+  --user-modal-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Home Icon - Replace Discord Logo */
+  --home-icon: url(https://i.imgur.com/XgEZXZK.png); /* Playboi Carti Logo */
+  --home-size: 40px;
+
+  /* Custom Animations - Whole Lotta Red Vibes */
+  @keyframes carti-glow {
+    0% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red; }
+    100% { text-shadow: 0 0 10px red, 0 0 15px red, 0 0 20px red; }
+  }
+
+  /* Apply Animation to Selected Channels */
+  .wrapper__2ea32.modeSelected__2ea32 .name__2ea32 {
+    animation: carti-glow 1.5s infinite alternate ease-in-out;
+  }
+}
