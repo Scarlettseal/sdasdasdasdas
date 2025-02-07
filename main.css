@@ -1,74 +1,96 @@
 :root {
-  /* Playboi Carti Color Theme */
-  --main-color: #ff0000; /* Whole Lotta Red primary color */
-  --hover-color: #b30000; /* Darker red for hover effects */
-  --success-color: #ff1a1a; /* Bright red for success */
-  --danger-color: #8b0000; /* Deep red for warnings */
-
-  /* Channel & Server Colors */
-  --channel-color: rgba(255, 255, 255, 0.3);
-  --channel-hovered: rgba(255, 0, 0, 0.7);
-  --channel-unread: var(--main-color);
-  --channel-selected: #fff;
-  --channel-muted: rgba(255, 255, 255, 0.1);
-  --server-unread: var(--main-color);
-  --url-color: var(--main-color);
-  --focus-color: var(--main-color);
-
-  /* Status Colors */
-  --online-color: #ff1a1a;
-  --idle-color: #ff6600;
-  --dnd-color: #8b0000;
-  --offline-color: #4d4d4d;
-  --streaming-color: #661a80;
-
-  /* Fonts - Playboi Carti Aesthetic */
-  --main-font: "Old English Text MT", "Impact", "Arial Black", sans-serif;
+  --main-color: #ff0000; /* Blood Red */
+  --hover-color: #b30000; /* Darker Red */
+  --success-color: #ff5555; /* Lighter Red */
+  --danger-color: #8b0000; /* Deep Crimson */
+  
+  /* Fonts */
+  --main-font: "Old English Text MT", "Gotham Black", "Arial Black", sans-serif; 
   --code-font: "Fira Code", "Courier New", monospace;
-  --font-display: var(--main-font);
   
   /* Text Colors */
-  --text-normal: rgb(220, 0, 0); /* Blood red text */
-  --text-muted: rgb(114, 0, 0); /* Dark red muted text */
+  --text-normal: rgb(255, 20, 20); /* Blood Red */
+  --text-muted: rgb(140, 0, 0); /* Dark Red */
+  
+  /* Layout */
+  --channels-width: 200px;
+  --members-width: 230px;
 
-  /* Sidebar & Channel List */
-  --channels-width: 200px; /* Sleek & compact channel list */
-  --members-width: 230px; /* Member list width */
-
-  /* Background - Playboi Carti Whole Lotta Red Theme */
-  --background-shading: 90%;
-  --background-overlay: rgba(0, 0, 0, 0.8);
-  --background-image: url(https://i.imgur.com/zUjOXxl.jpg); /* Playboi Carti aesthetic */
+  /* Background */
+  --background-shading: 85%;
+  --background-overlay: rgba(0, 0, 0, 0.75);
+  --background-image: url(https://i.pinimg.com/originals/ef/0b/10/ef0b1017a97cfdb8b92f0980d8a77f6b.jpg); /* Playboi Carti-themed */
   --background-position: center;
   --background-size: cover;
   --background-repeat: no-repeat;
   --background-attachment: fixed;
-  --background-brightness: 85%;
-  --background-contrast: 120%;
-  --background-saturation: 140%;
+  --background-brightness: 90%;
+  --background-contrast: 110%;
+  --background-saturation: 120%;
   --background-invert: 0%;
   --background-grayscale: 10%;
   --background-sepia: 5%;
-  --background-blur: 3px;
+  --background-blur: 2px;
 
-  /* Popouts & Modals */
-  --user-popout-image: var(--background-image);
-  --user-popout-overlay: rgba(0, 0, 0, 0.7);
-  --user-modal-image: var(--background-image);
-  --user-modal-overlay: rgba(0, 0, 0, 0.7);
+  /* Server & Channel Colors */
+  --server-unread: var(--main-color);
+  --channel-unread: var(--main-color);
+  --channel-hovered: rgba(255, 0, 0, 0.7);
+  --channel-muted: rgba(255, 0, 0, 0.3);
+  --channel-selected: #ff0000;
 
-  /* Home Icon - Replace Discord Logo */
-  --home-icon: url(https://i.imgur.com/XgEZXZK.png); /* Playboi Carti Logo */
-  --home-size: 40px;
+  /* Notifications */
+  --mention-bg: #ff0000;
+  --mention-text: #ffffff;
 
-  /* Custom Animations - Whole Lotta Red Vibes */
-  @keyframes carti-glow {
-    0% { text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red; }
-    100% { text-shadow: 0 0 10px red, 0 0 15px red, 0 0 20px red; }
-  }
+  /* Buttons */
+  --button-bg: var(--main-color);
+  --button-hover: var(--hover-color);
+  --button-active: var(--danger-color);
+}
 
-  /* Apply Animation to Selected Channels */
-  .wrapper__2ea32.modeSelected__2ea32 .name__2ea32 {
-    animation: carti-glow 1.5s infinite alternate ease-in-out;
-  }
+/* Playboi Carti Aesthetic Animations */
+@keyframes vamp-glow {
+  0% { text-shadow: 0 0 5px #ff0000; }
+  50% { text-shadow: 0 0 10px #b30000; }
+  100% { text-shadow: 0 0 5px #ff0000; }
+}
+
+/* Channel Name Glow Effect */
+.wrapper__2ea32 .name__2ea32 {
+  color: var(--main-color);
+  font-weight: bold;
+  animation: vamp-glow 2s infinite alternate;
+}
+
+/* Server Icon Hover */
+.homeIcon__2ea32:hover {
+  filter: drop-shadow(0 0 5px var(--main-color));
+}
+
+/* Message Text Glow */
+.messageContent__12345 {
+  color: var(--text-normal);
+  animation: vamp-glow 1.5s infinite alternate;
+}
+
+/* Make Notifications Pulse */
+.numberBadge__2b1f5 {
+  background: var(--main-color);
+  animation: vamp-glow 1s infinite alternate;
+}
+
+/* Sidebar Styling */
+.sidebar_c48ade {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.button__06eda {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.button__06eda:hover {
+  background-color: var(--hover-color);
 }
